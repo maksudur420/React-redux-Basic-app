@@ -1,11 +1,20 @@
 
 import './App.css';
+import ShowTodos from './components/react-redux-dataFetch/ShowTodos';
+import store from './components/react-redux-dataFetch/store';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="">My First React-Redux App</h1>
-    </div>
+
+    <Provider store ={store}>
+        <div className="App">
+        <ShowTodos ></ShowTodos>
+      </div>
+    </Provider>
+      
+   
+    
   );
 }
 
